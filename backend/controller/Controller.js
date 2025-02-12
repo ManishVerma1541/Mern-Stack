@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import express from "express";
-import { AddPerson,getPersonByid,updatePersonByid,userRagister,Login} from "../view/View.js";
+import { AddPerson,getPersonByid,updatePersonByid,userRagister,Login, deletePersonById} from "../view/View.js";
 
 
 const router = express.Router();
@@ -11,7 +11,7 @@ router.post('/login',Login)
 router.post('/add',AddPerson);
 router.get('/getperson/:id',getPersonByid);
 router.patch('/updateperson/:id',updatePersonByid);
-router.delete('/',)
+router.delete('/deleteperson/:id',deletePersonById,)
 
 export const DbConnect = async()=>{
    try{

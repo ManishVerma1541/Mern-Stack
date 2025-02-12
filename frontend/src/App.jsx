@@ -8,6 +8,7 @@ import { AddPerson } from "./Components/AddPerson.jsx";
 import { Contact } from "./Components/Contact.jsx";
 import { About } from "./Components/About.jsx";
 import { Signup } from "./Components/Signup.jsx";
+import { UpdateUser } from "./Components/UpdateUser.jsx";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/login" element={<LogIn/>}/>
           <Route path="/signup" element={<Signup/>}/>
+          <Route path='update/:id' element={<UpdateUser/>}/>
         </Route>
       </Routes>
     </>

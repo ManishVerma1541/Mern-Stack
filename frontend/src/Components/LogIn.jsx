@@ -23,9 +23,10 @@ export const LogIn = () => {
       message: "Invalid Credential";
     }
 
-    const handleChange = (e) => {
-      setData({ ...data, [e.taeget.name]: e.target.value });
-    };
+    
+  };
+  const handleChange = (e) => {
+    setFormData({ ...FormData, [e.taeget.name]: e.target.value });
   };
   return (
     <div className="d-flex vh-100 justify-content-center align-item-center bg-primary">

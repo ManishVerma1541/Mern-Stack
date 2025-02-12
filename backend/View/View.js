@@ -1,4 +1,5 @@
-import User from "../models/Models.js";
+import {User,Person} from "../models/Models.js";
+
 
 export const userRagister = async(req,res)=>{
     try{
@@ -127,3 +128,19 @@ export const updatePersonByid = async (req, res) => {
     message: "Person Updated Suceesfully",
   });
 };
+
+export const deletePersonById = async(res,req)=>{
+  const {id} = req.param;
+  const result = await Person.deleteOne({_id : id});
+  if(!result) {
+      return res.status(404).json(
+          `User not found : ${id}`
+      )
+  }
+
+  if (result.deletedCount === 1){
+      return res.status(200).json(
+           `User deleted successfully by id : ${id}`
+      )
+  }
+}

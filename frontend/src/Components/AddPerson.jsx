@@ -14,7 +14,7 @@ const getFormData = (form) => {
 
 const saveData = (data) => {
 
-  fetch("http://localhost:8000/api/person", {
+  fetch("http://localhost:8000/api/add", {
     method: "POST",
     contentType: "application/json",
     body: JSON.stringify(data),
